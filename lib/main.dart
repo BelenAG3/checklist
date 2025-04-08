@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _dateController3 = TextEditingController();
   final TextEditingController _dateController4 = TextEditingController();*/
   final TextEditingController _dateController5 = TextEditingController();
-  /*final TextEditingController _dateController6 = TextEditingController();
+  final TextEditingController _dateController6 = TextEditingController();
   final TextEditingController _dateController7 = TextEditingController();
   final TextEditingController _dateController8 = TextEditingController();
   final TextEditingController _dateController9 = TextEditingController();
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _dateController15 = TextEditingController();
   final TextEditingController _dateController16 = TextEditingController();
   final TextEditingController _dateController17 = TextEditingController();
-  final TextEditingController _dateController18 = TextEditingController();
+  /*final TextEditingController _dateController18 = TextEditingController();
   final TextEditingController _dateController19 = TextEditingController();
   final TextEditingController _dateController20 = TextEditingController();
   final TextEditingController _dateController21 = TextEditingController();
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }*/
-
+String inputText = "";
 
   @override
   Widget build(BuildContext context) {
@@ -167,8 +167,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         labelText: 'Ingrese una fecha',
                         border: OutlineInputBorder(),
                       ),
+                       onChanged: (text) {
+                        // Guardar el texto automáticamente en la variable cuando cambia
+                        setState(() {
+                          inputText = text;
+                        });
+                      },
                     ),
                   ),
+                  //Text('Texto guardado: $inputText'),
                 ],
               ),
             ),
@@ -189,9 +196,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           labelText: 'Escribe la obra',
                           border: OutlineInputBorder(),
                         ),
+                         onChanged: (text) {
+                        // Guardar el texto automáticamente en la variable cuando cambia
+                        setState(() {
+                          inputText = text;
+                          });
+                        },
                       ),
                     ),
-                  ),
+                  ), //Text('Texto guardado: $inputText'),
                 ],
               ),
             ),
@@ -347,6 +360,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                 onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -426,10 +445,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController6,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                 onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -493,10 +518,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController7,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -560,10 +591,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController8,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -627,10 +664,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController9,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -694,10 +737,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController10,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -761,10 +810,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController11,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -828,10 +883,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController12,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -895,10 +956,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController13,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -962,10 +1029,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController14,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -1029,10 +1102,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController15,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -1096,10 +1175,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController16,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -1163,10 +1248,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               width: 500,
                               child: TextField(
-                                controller: _dateController5,
+                                controller: _dateController17,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                 ),
+                                onChanged: (text) {
+                                  // Guardar el texto automáticamente en la variable cuando cambia
+                                  setState(() {
+                                    inputText = text;
+                                    });
+                                 }
                               ),
                             ),
                           ],
@@ -1194,7 +1285,7 @@ class _MyHomePageState extends State<MyHomePage> {
             final Email email = Email(
               body: 'Aquí va el contenido de tu correo',
               subject: 'Asunto del correo',
-              recipients: ['checklistmontaje@guillen_carpinteria.com'], // Destinatario
+              recipients: ['checklistmontaje@guillen-carpinteria.com'], // Destinatario
               isHTML: false, // Si el cuerpo es HTML, ponlo como true
             );
 
