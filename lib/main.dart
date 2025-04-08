@@ -40,11 +40,11 @@ class _MyHomePageState extends State<MyHomePage> {
 //  int _counter = 0;
   final TextEditingController _dateController = TextEditingController();
   final TextEditingController _dateController1 = TextEditingController();
-  final TextEditingController _dateController2 = TextEditingController();
+  /*final TextEditingController _dateController2 = TextEditingController();
   final TextEditingController _dateController3 = TextEditingController();
-  final TextEditingController _dateController4 = TextEditingController();
+  final TextEditingController _dateController4 = TextEditingController();*/
   final TextEditingController _dateController5 = TextEditingController();
-  final TextEditingController _dateController6 = TextEditingController();
+  /*final TextEditingController _dateController6 = TextEditingController();
   final TextEditingController _dateController7 = TextEditingController();
   final TextEditingController _dateController8 = TextEditingController();
   final TextEditingController _dateController9 = TextEditingController();
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _dateController37 = TextEditingController();
   final TextEditingController _dateController38 = TextEditingController();
   final TextEditingController _dateController39 = TextEditingController();
-  final TextEditingController _dateController40 = TextEditingController();
+  final TextEditingController _dateController40 = TextEditingController();*/
 
   bool _isChecked = false; // Define esto en el estado de tu widget (StatefulWidget)
   /*void _incrementCounter() {
