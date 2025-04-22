@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_email_sender/flutter_email_sender.dart';
+//import 'package:flutter_email_sender/flutter_email_sender.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 void main() {
@@ -81,6 +82,36 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _dateController40 = TextEditingController();*/
 
   bool _isChecked = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked2 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked3 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked4 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked5 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked6 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked7 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked8 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked9 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked10 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked11 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked12 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked13 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked14 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked15 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked16 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked17 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked18 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked19 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked20 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked21 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked22 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked23 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked24 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked25 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked26 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  /*bool _isChecked27 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked28 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked29 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked30 = false; // Define esto en el estado de tu widget (StatefulWidget)
+  bool _isChecked31 = false; // Define esto en el estado de tu widget (StatefulWidget)*/
   /*void _incrementCounter() {
     setState(() {
       
@@ -344,10 +375,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked2,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked2 = value ?? false;
                                     });
                                   },
                                 );
@@ -420,10 +451,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked3,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked3 = value ?? false;
                                     });
                                   },
                                 );
@@ -433,10 +464,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked4,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked4 = value ?? false;
                                     });
                                   },
                                 );
@@ -493,10 +524,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked5,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked5 = value ?? false;
                                     });
                                   },
                                 );
@@ -506,10 +537,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked6,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked6 = value ?? false;
                                     });
                                   },
                                 );
@@ -566,10 +597,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked7,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked7 = value ?? false;
                                     });
                                   },
                                 );
@@ -579,10 +610,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked8,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked8 = value ?? false;
                                     });
                                   },
                                 );
@@ -639,10 +670,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked9,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked9 = value ?? false;
                                     });
                                   },
                                 );
@@ -652,10 +683,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked10,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked10 = value ?? false;
                                     });
                                   },
                                 );
@@ -712,10 +743,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked11,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked11 = value ?? false;
                                     });
                                   },
                                 );
@@ -725,10 +756,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked12,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked12 = value ?? false;
                                     });
                                   },
                                 );
@@ -785,10 +816,10 @@ String inputText = "";
                            StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked13,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked13 = value ?? false;
                                     });
                                   },
                                 );
@@ -798,10 +829,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked14,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked14 = value ?? false;
                                     });
                                   },
                                 );
@@ -858,10 +889,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked15,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked15 = value ?? false;
                                     });
                                   },
                                 );
@@ -871,10 +902,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked16,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked16 = value ?? false;
                                     });
                                   },
                                 );
@@ -931,10 +962,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked17,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked17 = value ?? false;
                                     });
                                   },
                                 );
@@ -944,10 +975,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked18,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked18 = value ?? false;
                                     });
                                   },
                                 );
@@ -1004,10 +1035,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked19,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked19 = value ?? false;
                                     });
                                   },
                                 );
@@ -1017,10 +1048,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked20,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked20 = value ?? false;
                                     });
                                   },
                                 );
@@ -1077,10 +1108,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked21,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked21 = value ?? false;
                                     });
                                   },
                                 );
@@ -1090,10 +1121,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked22,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked22 = value ?? false;
                                     });
                                   },
                                 );
@@ -1150,10 +1181,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked23,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked23 = value ?? false;
                                     });
                                   },
                                 );
@@ -1163,10 +1194,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked24,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked24 = value ?? false;
                                     });
                                   },
                                 );
@@ -1223,10 +1254,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked25,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked25 = value ?? false;
                                     });
                                   },
                                 );
@@ -1236,10 +1267,10 @@ String inputText = "";
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
-                                  value: _isChecked,
+                                  value: _isChecked26,
                                   onChanged: (bool? value) {
                                     setState(() {
-                                      _isChecked = value ?? false;
+                                      _isChecked26 = value ?? false;
                                     });
                                   },
                                 );
@@ -1277,36 +1308,45 @@ String inputText = "";
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),*/ // This trailing comma makes auto-formatting nicer for build methods.
-      floatingActionButton: SizedBox(
+      floatingActionButton: Container(
         width: 200,
         height: 60,
+        
+        margin: EdgeInsets.all(10),
         child: ElevatedButton(
           onPressed: () async {
-            final Email email = Email(
-              body: 'Aquí va el contenido de tu correo',
-              subject: 'Asunto del correo',
-              recipients: ['checklistmontaje@guillen-carpinteria.com'], // Destinatario
-              isHTML: false, // Si el cuerpo es HTML, ponlo como true
+            String Fecha = _dateController.text;
+            String Obra = _dateController1.text;
+             
+
+            String subject = 'Asunto del correo';
+            String body = 'Esta es la fecha $Fecha. Este es el contenido del correo con la información de la app $Obra.' ;
+
+            final Uri emailUri = Uri(
+              scheme: 'mailto',
+              path: 'checklistmontaje@guillen-carpinteria.com',
+              query: Uri.encodeFull('subject=$subject&body=$body'),
             );
 
-            await FlutterEmailSender.send(email); // Enviar correo
+            if (await canLaunchUrl(emailUri)) {
+              await launchUrl(emailUri);
+            } else {
+              print(' No se pudo abrir el cliente de correo');
+            }
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.blue, // Fondo azul
+            foregroundColor: Colors.white, // Texto blanco
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)
-            )
-          ),
-          child: const Text(
-            'Enviar',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
             ),
+            textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
+          child: Text('Enviar'),
         ),
       ),
     );
   }
 }
 
+ 
