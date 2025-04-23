@@ -524,6 +524,36 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
                 Flexible(
                   child: Container(
                     color: Colors.grey[300], // Fondo gris
+                    padding: EdgeInsets.all(2), // Opcional: un poco de espacio interno
+                    child: Table(
+                      columnWidths: {
+                        0: FractionColumnWidth(1),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(8),
+                              child: Text(
+                                'MONTAJE',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+             
+             
+             Row(
+              children: [
+                Flexible(
+                  child: Container(
+                    color: Colors.grey[300], // Fondo gris
                     padding: EdgeInsets.all(8), // Opcional: agregar algo de padding
                     child: Table(
                       border: TableBorder.all(), // Establece el borde de la tabla
@@ -1391,8 +1421,11 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
             String subject = 'Asunto del correo';
             String body = 'Esta es la fecha $Fecha. '
               'Este es el contenido del correo con la información de la app $Obra.\n'
+              'RECEPCIÓN \n'
               'Vienen la carpínteria según albarán: $resultadoCarpAlba. \n'
+              'REPARTO \n'
               'Correcta según cuadrante de Medición: $resultadoCuadMedi. \n'
+              'MONTAJE \n'
               'Montaje de Huecos de Entrada: $resultadoMontjeHueEntr. \n'
               'Ajuste Holguras Huecos de Entrada: $resultadoAjusteHolEntr. \n'
               'Montaje de Huecos de Paso: $resultadoMontajeHuePaso. \n'
@@ -1403,7 +1436,7 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
               'Montaje de Rodapies: $resultadoMontajeRoda. \n'
               'Montaje de Carpintería Especifica: $resultadoMontajeCar. \n'
               'Revisión de elementos complementarios: $resultadoRevision.\n' 
-              'Repaso piezas de carpintería (emplastecido...): $resultadoRepasos.';
+              'Repaso piezas de carpintería (emplastecido...): $resultadoRepasos. \n';
 
             final Uri emailUri = Uri(
               scheme: 'mailto',
