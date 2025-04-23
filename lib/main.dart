@@ -31,6 +31,8 @@ class MyHomePage extends StatefulWidget {
   
 
   final String title;
+  
+
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -119,7 +121,19 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }*/
 String inputText = "";
-
+String resultadoRevision = ''; // Esto guardará "Sí" o "No"
+String resultadoRepasos = ''; // Esto guardará "Sí" o "No"
+String resultadoMontajeCar = ''; // Esto guardará "Sí" o "No"
+String resultadoMontajeRoda = ''; // Esto guardará "Sí" o "No"
+String resultadoMontajeTapa = ''; // Esto guardará "Sí" o "No"
+String resultadoAjusteHolArm = ''; // Esto guardará "Sí" o "No"
+String resultadoMontajeModArma = ''; // Esto guardará "Sí" o "No"
+String resultadoAjusteHolPaso = ''; // Esto guardará "Sí" o "No"
+String resultadoMontajeHuePaso = ''; // Esto guardará "Sí" o "No"
+String resultadoAjusteHolEntr = ''; // Esto guardará "Sí" o "No"
+String resultadoMontjeHueEntr = ''; // Esto guardará "Sí" o "No"
+String resultadoCuadMedi = ''; // Esto guardará "Sí" o "No"
+String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
   @override
   Widget build(BuildContext context) {
     
@@ -366,6 +380,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked = value ?? false;
+                                      _isChecked2 = false; // Desmarca la otra
+                                      resultadoCarpAlba = _isChecked ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -379,6 +395,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked2 = value ?? false;
+                                      _isChecked = false; // Desmarca la otra
+                                      resultadoCarpAlba = _isChecked2 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -455,6 +473,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked3 = value ?? false;
+                                      _isChecked4 = false; // Desmarca la otra
+                                      resultadoCuadMedi = _isChecked3 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -468,6 +488,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked4 = value ?? false;
+                                      _isChecked3 = false; // Desmarca la otra
+                                      resultadoCuadMedi = _isChecked4 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -528,6 +550,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked5 = value ?? false;
+                                      _isChecked6 = false; // Desmarca la otra
+                                      resultadoMontjeHueEntr = _isChecked5 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -541,6 +565,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked6 = value ?? false;
+                                      _isChecked5 = false; // Desmarca la otra
+                                      resultadoMontjeHueEntr = _isChecked6 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -601,6 +627,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked7 = value ?? false;
+                                      _isChecked8 = false; // Desmarca la otra
+                                      resultadoAjusteHolEntr = _isChecked7 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -614,6 +642,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked8 = value ?? false;
+                                      _isChecked7 = false; // Desmarca la otra
+                                      resultadoAjusteHolEntr = _isChecked8 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -674,6 +704,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked9 = value ?? false;
+                                      _isChecked10 = false; // Desmarca la otra
+                                      resultadoMontajeHuePaso = _isChecked9 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -687,6 +719,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked10 = value ?? false;
+                                      _isChecked9 = false; // Desmarca la otra
+                                      resultadoMontajeHuePaso = _isChecked10 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -747,6 +781,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked11 = value ?? false;
+                                      _isChecked12 = false; // Desmarca la otra
+                                      resultadoAjusteHolPaso = _isChecked11 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -760,6 +796,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked12 = value ?? false;
+                                      _isChecked11 = false; // Desmarca la otra
+                                      resultadoAjusteHolPaso = _isChecked12 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -820,6 +858,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked13 = value ?? false;
+                                      _isChecked14 = false; // Desmarca la otra
+                                      resultadoMontajeModArma = _isChecked13 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -833,6 +873,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked14 = value ?? false;
+                                      _isChecked13 = false; // Desmarca la otra
+                                      resultadoMontajeModArma = _isChecked14 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -893,6 +935,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked15 = value ?? false;
+                                      _isChecked16 = false; // Desmarca la otra
+                                      resultadoAjusteHolArm = _isChecked15 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -906,6 +950,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked16 = value ?? false;
+                                      _isChecked15 = false; // Desmarca la otra
+                                      resultadoAjusteHolArm = _isChecked16 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -966,6 +1012,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked17 = value ?? false;
+                                      _isChecked18 = false; // Desmarca la otra
+                                      resultadoMontajeTapa = _isChecked17 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -979,6 +1027,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked18 = value ?? false;
+                                      _isChecked17 = false; // Desmarca la otra
+                                      resultadoMontajeTapa = _isChecked18 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -1039,6 +1089,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked19 = value ?? false;
+                                      _isChecked20 = false; // Desmarca la otra
+                                      resultadoMontajeRoda = _isChecked19 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -1052,6 +1104,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked20 = value ?? false;
+                                      _isChecked19 = false; // Desmarca la otra
+                                      resultadoMontajeRoda = _isChecked20 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -1112,6 +1166,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked21 = value ?? false;
+                                      _isChecked22 = false; // Desmarca la otra
+                                      resultadoMontajeCar = _isChecked21 ? 'Si' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -1125,6 +1181,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked22 = value ?? false;
+                                      _isChecked21 = false; // Desmarca la otra
+                                      resultadoMontajeCar = _isChecked22 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -1178,6 +1236,7 @@ String inputText = "";
                                 'Revisión de elementos complementarios (barras ...)',
                               ),
                             ),
+                            // Checkbox para "Sí"
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
@@ -1185,12 +1244,16 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked23 = value ?? false;
+                                      _isChecked24 = false; // Desmarca la otra
+                                      resultadoRevision = _isChecked23 ? 'Sí' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
                               },
                             ),
+
                             // Campo de texto 2
+                            // Checkbox para "No"
                             StatefulBuilder(
                               builder: (context, setState) {
                                 return Checkbox(
@@ -1198,6 +1261,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked24 = value ?? false;
+                                      _isChecked23 = false; // Desmarca la otra
+                                      resultadoRevision = _isChecked24 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -1258,6 +1323,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked25 = value ?? false;
+                                      _isChecked26 = false; // Desmarca la otra
+                                      resultadoRepasos = _isChecked25 ? 'Sí' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -1271,6 +1338,8 @@ String inputText = "";
                                   onChanged: (bool? value) {
                                     setState(() {
                                       _isChecked26 = value ?? false;
+                                      _isChecked25 = false; // Desmarca la otra
+                                      resultadoRepasos = _isChecked26 ? 'No' : ''; // Actualiza el valor
                                     });
                                   },
                                 );
@@ -1317,10 +1386,24 @@ String inputText = "";
           onPressed: () async {
             String Fecha = _dateController.text;
             String Obra = _dateController1.text;
-             
+            
 
             String subject = 'Asunto del correo';
-            String body = 'Esta es la fecha $Fecha. Este es el contenido del correo con la información de la app $Obra.' ;
+            String body = 'Esta es la fecha $Fecha. '
+              'Este es el contenido del correo con la información de la app $Obra.\n'
+              'Vienen la carpínteria según albarán: $resultadoCarpAlba. \n'
+              'Correcta según cuadrante de Medición: $resultadoCuadMedi. \n'
+              'Montaje de Huecos de Entrada: $resultadoMontjeHueEntr. \n'
+              'Ajuste Holguras Huecos de Entrada: $resultadoAjusteHolEntr. \n'
+              'Montaje de Huecos de Paso: $resultadoMontajeHuePaso. \n'
+              'Ajuste Holguras Huecos de Paso: $resultadoAjusteHolPaso. \n'
+              'Montaje de Modulo de Armarios: $resultadoMontajeModArma. \n'
+              'Ajuste Holguras Huecos de Armarios: $resultadoAjusteHolArm. \n'
+              'Montaje de Tapajuntas: $resultadoMontajeTapa. \n'
+              'Montaje de Rodapies: $resultadoMontajeRoda. \n'
+              'Montaje de Carpintería Especifica: $resultadoMontajeCar. \n'
+              'Revisión de elementos complementarios: $resultadoRevision.\n' 
+              'Repaso piezas de carpintería (emplastecido...): $resultadoRepasos.';
 
             final Uri emailUri = Uri(
               scheme: 'mailto',
