@@ -1416,13 +1416,33 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
           onPressed: () async {
             String Fecha = _dateController.text;
             String Obra = _dateController1.text;
+            List<TextEditingController> observacionesControllers = [
+              _dateController5,
+              _dateController6,
+             _dateController7,
+             _dateController8,
+             _dateController9,
+             _dateController10,
+             _dateController11,
+             _dateController12,
+             _dateController13,
+              _dateController14,
+              _dateController15,
+              _dateController16,
+              _dateController17,
+            ];
             
 
             String subject = 'Asunto del correo';
+            String observaciones = observacionesControllers
+            .map((controller) => controller.text)
+            .join(', ');
             String body = 'Esta es la fecha $Fecha. '
               'Este es el contenido del correo con la información de la app $Obra.\n'
               'RECEPCIÓN \n'
               'Vienen la carpínteria según albarán: $resultadoCarpAlba. \n'
+              'Observaciones: $observaciones\n'
+              //'Observaciones $_dateController5.'
               'REPARTO \n'
               'Correcta según cuadrante de Medición: $resultadoCuadMedi. \n'
               'MONTAJE \n'
