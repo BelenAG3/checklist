@@ -1416,7 +1416,20 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
           onPressed: () async {
             String Fecha = _dateController.text;
             String Obra = _dateController1.text;
-            List<TextEditingController> observacionesControllers = [
+            String observacion1 = _dateController5.text;
+            String observacion2 = _dateController6.text; 
+            String observacion3 = _dateController7.text; 
+            String observacion4 = _dateController8.text; 
+            String observacion5 = _dateController9.text; 
+            String observacion6 = _dateController10.text; 
+            String observacion7 = _dateController11.text; 
+            String observacion8 = _dateController12.text; 
+            String observacion9 = _dateController13.text; 
+            String observacion10 = _dateController14.text; 
+            String observacion11 = _dateController15.text; 
+            String observacion12 = _dateController16.text; 
+            String observacion13 = _dateController17.text; 
+            /*List<TextEditingController> observacionesControllers = [
               _dateController5,
               _dateController6,
              _dateController7,
@@ -1430,33 +1443,46 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
               _dateController15,
               _dateController16,
               _dateController17,
-            ];
+            ];*/
             
 
             String subject = 'Asunto del correo';
-            String observaciones = observacionesControllers
+            /*String observaciones = observacionesControllers
             .map((controller) => controller.text)
-            .join(', ');
+            .join(', ');*/
             String body = 'Esta es la fecha $Fecha. '
               'Este es el contenido del correo con la información de la app $Obra.\n'
               'RECEPCIÓN \n'
               'Vienen la carpínteria según albarán: $resultadoCarpAlba. \n'
-              'Observaciones: $observaciones\n'
+              'Observación: $observacion1. \n'
+              //'Observaciones: $observaciones\n'
               //'Observaciones $_dateController5.'
               'REPARTO \n'
               'Correcta según cuadrante de Medición: $resultadoCuadMedi. \n'
+              'Observación: $observacion2. \n'
               'MONTAJE \n'
               'Montaje de Huecos de Entrada: $resultadoMontjeHueEntr. \n'
+              'Observación: $observacion3. \n'
               'Ajuste Holguras Huecos de Entrada: $resultadoAjusteHolEntr. \n'
+              'Observación: $observacion4. \n'
               'Montaje de Huecos de Paso: $resultadoMontajeHuePaso. \n'
+              'Observación: $observacion5. \n'
               'Ajuste Holguras Huecos de Paso: $resultadoAjusteHolPaso. \n'
+              'Observación: $observacion6. \n'
               'Montaje de Modulo de Armarios: $resultadoMontajeModArma. \n'
+              'Observación: $observacion7. \n'
               'Ajuste Holguras Huecos de Armarios: $resultadoAjusteHolArm. \n'
+              'Observación: $observacion8 . \n'
               'Montaje de Tapajuntas: $resultadoMontajeTapa. \n'
+              'Observación: $observacion9. \n'
               'Montaje de Rodapies: $resultadoMontajeRoda. \n'
+              'Observación: $observacion10. \n'
               'Montaje de Carpintería Especifica: $resultadoMontajeCar. \n'
+              'Observación: $observacion11. \n'
               'Revisión de elementos complementarios: $resultadoRevision.\n' 
+              'Observación: $observacion12. \n'
               'Repaso piezas de carpintería (emplastecido...): $resultadoRepasos. \n';
+              'Observación: $observacion13. \n';
 
             final Uri emailUri = Uri(
               scheme: 'mailto',
