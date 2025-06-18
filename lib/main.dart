@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'resumen_screen.dart';
+//import 'resumen_screen.dart';
 
 
 
@@ -11,6 +11,17 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  /*Future<void> _sendEmail() async {
+    final String subject = Uri.encodeComponent('Asunto del correo');
+    final String body = Uri.encodeComponent('Hola,\n\nEste es el cuerpo del correo.\n\nSaludos.');
+    final Uri emailUri = Uri.parse('mailto:checklistmontaje@guillen-carpinteria.com?subject=$subject&body=$body');
+
+    if (await canLaunchUrl(emailUri)) {
+      await launchUrl(emailUri);
+    } else {
+      throw 'No se pudo lanzar el cliente de correo';
+    }
+  }*/
 
   
   @override
@@ -24,6 +35,7 @@ class MyApp extends StatelessWidget {
       ), 
       home: const MyHomePage(title: 'CHECK-LIST TRABAJOS DE MONTAJE'),
     );
+    
   }
 }
 
@@ -41,6 +53,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  /*Future<void> _openEmail() async {
+  final Uri emailUri = Uri.parse(
+    'mailto:checklistmontaje@guillen-carpinteria.com?subject=Asunto%20del%20correo&body=Cuerpo%20del%20mensaje'
+  );
+
+  if (await canLaunchUrl(emailUri)) {
+    await launchUrl(emailUri);
+  } else {
+    throw 'No se pudo lanzar el correo';
+  }
+}*/
+
    final Color _color = Color.fromARGB(155, 204, 204, 204);
 //  int _counter = 0;
   final TextEditingController _dateController = TextEditingController();
@@ -136,6 +160,7 @@ String resultadoAjusteHolEntr = ''; // Esto guardará "Sí" o "No"
 String resultadoMontjeHueEntr = ''; // Esto guardará "Sí" o "No"
 String resultadoCuadMedi = ''; // Esto guardará "Sí" o "No"
 String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
+
   @override
   Widget build(BuildContext context) {
     
@@ -1404,12 +1429,93 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
           ]
         ),   
       ),
+      
+        
+        floatingActionButton: Container(
+        width: 200,
+        height: 60,
+        margin: EdgeInsets.all(10),
+        child: ElevatedButton(
+          onPressed: () async {
+            String Fecha = _dateController.text;
+            String Obra = _dateController1.text;
+            String observacion1 = _dateController5.text;
+            String observacion2 = _dateController6.text; 
+            String observacion3 = _dateController7.text; 
+            String observacion4 = _dateController8.text; 
+            String observacion5 = _dateController9.text; 
+            String observacion6 = _dateController10.text; 
+            String observacion7 = _dateController11.text; 
+            String observacion8 = _dateController12.text; 
+            String observacion9 = _dateController13.text; 
+            String observacion10 = _dateController14.text; 
+            String observacion11 = _dateController15.text; 
+            String observacion12 = _dateController16.text; 
+            String observacion13 = _dateController17.text; 
+
+            String subject = 'Asunto del correo';
+            String body = 'Esta es la fecha $Fecha. '
+              'Este es el contenido del correo con la información de la app $Obra.\n'
+              'RECEPCIÓN \n'
+              'Vienen la carpínteria según albarán: $resultadoCarpAlba. \n'
+              'Observación: $observacion1. \n'
+              'REPARTO \n'
+              'Correcta según cuadrante de Medición: $resultadoCuadMedi. \n'
+              'Observación: $observacion2. \n'
+              'MONTAJE \n'
+              'Montaje de Huecos de Entrada: $resultadoMontjeHueEntr. \n'
+              'Observación: $observacion3. \n'
+              'Ajuste Holguras Huecos de Entrada: $resultadoAjusteHolEntr. \n'
+              'Observación: $observacion4. \n'
+              'Montaje de Huecos de Paso: $resultadoMontajeHuePaso. \n'
+              'Observación: $observacion5. \n'
+              'Ajuste Holguras Huecos de Paso: $resultadoAjusteHolPaso. \n'
+              'Observación: $observacion6. \n'
+              'Montaje de Modulo de Armarios: $resultadoMontajeModArma. \n'
+              'Observación: $observacion7. \n'
+              'Ajuste Holguras Huecos de Armarios: $resultadoAjusteHolArm. \n'
+              'Observación: $observacion8 . \n'
+              'Montaje de Tapajuntas: $resultadoMontajeTapa. \n'
+              'Observación: $observacion9. \n'
+              'Montaje de Rodapies: $resultadoMontajeRoda. \n'
+              'Observación: $observacion10. \n'
+              'Montaje de Carpintería Especifica: $resultadoMontajeCar. \n'
+              'Observación: $observacion11. \n'
+              'Revisión de elementos complementarios: $resultadoRevision.\n' 
+              'Observación: $observacion12. \n'
+              'Repaso piezas de carpintería (emplastecido...): $resultadoRepasos. \n'
+              'Observación: $observacion13. \n';
+
+            final Uri emailUri = Uri(
+              scheme: 'mailto',
+              path: 'checklistmontaje@guillen-carpinteria.com',
+              query: Uri.encodeFull('subject=$subject&body=$body'),
+            );
+
+            if (await canLaunchUrl(emailUri)) {
+                    await launchUrl(emailUri);
+                  } else {
+                    print('No se pudo abrir el cliente de correo');
+                  }
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          child: Text('Enviar'),
+        ),
+      ),
+
       /*floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+          child: const Icon(Icons.add),
       ),*/ // This trailing comma makes auto-formatting nicer for build methods.
-      floatingActionButton: Container(
+ /*     floatingActionButton: Container(
         width: 200,
         height: 60,
         
@@ -1431,6 +1537,8 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
             String observacion11 = _dateController15.text; 
             String observacion12 = _dateController16.text; 
             String observacion13 = _dateController17.text; 
+
+            //await _openEmail();
             /*List<TextEditingController> observacionesControllers = [
               _dateController5,
               _dateController6,
@@ -1497,7 +1605,26 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
             } else {
               print(' No se pudo abrir el cliente de correo');
             }
+            /*Future<void> _openEmail() async {
+              final Uri mailToUri = Uri(
+                scheme: 'mailto',
+                path: 'checklistmontaje@guillen-carpinteria.com',
+                queryParameters: {
+                  'subject': 'Asunto del correo',
+                  'body': 'Cuerpo del mensaje',
+                },
+              );
+              if (await canLaunchUrl(mailToUri)) {
+                await launchUrl(mailToUri);
+              } else {
+                // Si no se puede lanzar el correo, mostrar un mensaje de error
+                throw 'No se pudo lanzar el correo';
+              };
+            };*/
+            //await _openEmail();
           },
+          
+          
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.blue, // Fondo azul
             foregroundColor: Colors.white, // Texto blanco
@@ -1508,8 +1635,10 @@ String resultadoCarpAlba = ''; // Esto guardará "Sí" o "No"
           ),
           child: Text('Enviar'),
         ),
-      ),
-    );
+      ),*/
+      
+      );
+    
   }
 }
 
